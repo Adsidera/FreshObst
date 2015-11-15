@@ -2,9 +2,15 @@
 <html>
 <head>
   <title>FreshObst</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+    
 </head>
 <body>
 <body id="page-top">
@@ -19,23 +25,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">FreshObst</a>
+                <div class="navbar-brand page-scroll"><%= link_to "FRESHOBST", root_path %></div>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <%= link_to "Store", store_path %>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#store">Store</a>
+                        <%= link_to "About", about_path %>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#news">News</a>
+                        <% link_to "News", news_path %>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <%= link_to "Contact", contact_path %>
                     </li>
                 </ul>
             </div>
@@ -43,19 +53,17 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
 <header>
+        <!--<% render 'partials/header' %>  -->
+
         <div class="header-content">
-            <div class="header-content-inner">
-                <h1>FreshObst</h1>
-                <hr>
-                <p style="text-transform:none;">Your freshest Obst and Gemüse in town, just a click's away</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-            </div>
+            <%= render 'partials/header' %>
+                
         </div>
 </header>
-    
+    <%= render 'partials/footer' %>
 <%= yield %>
 
+   
 </body>
 </html>

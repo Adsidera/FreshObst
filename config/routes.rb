@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'contact/index'
+    get 'news/index' => 'news#index', as: :news
+    get 'store' => 'store#index', as: :store
 
-  get 'about/index'
+  get 'contact' => 'contact#index', as: :contact
+
+    get 'about' => 'about#index', as: :about
 
   get 'home/index'
 
@@ -37,7 +40,7 @@ Rails.application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
-
+ 
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments
@@ -56,7 +59,9 @@ Rails.application.routes.draw do
   # Example resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
+  #     # (app/controllers/admin/products_controller.rb) 
+    
+    
   #     resources :products
   #   end
 end
