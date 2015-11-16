@@ -32,7 +32,7 @@ hr.light {
 }
 
 a {
-    color: #fff;
+    color: lightgrey;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -178,6 +178,15 @@ aside {
     .navbar-default.affix .nav>li>a:focus:hover {
         color: #f05f40;
     }
+    
+    #logo {
+    color:#f05f40;
+    }
+    
+    #logo>a:focus:hover {
+       text-decoration: none;
+    color:#f05f40;
+    }
 }
 
 header {
@@ -188,6 +197,8 @@ header {
     color: #fff;
 }
 
+
+    
 header .header-content {
     position: relative;
     width: 100%;
