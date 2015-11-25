@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :products
     get 'news/index' => 'news#index', as: :news
     get 'store' => 'store#index', as: :store
 
