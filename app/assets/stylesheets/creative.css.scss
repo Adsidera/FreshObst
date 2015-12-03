@@ -492,3 +492,51 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+
+/*********************
+**   Products     **
+*********************/
+
+
+.products {
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border: 10px gre #000000;
+}
+.container-product{
+    margin-left: 2%;
+    margin-right:2%; 
+    margin-top: 6%;
+    margin-bottom:50%;
+    
+    border-radius: 2% 2% 2% 2%;
+    -moz-border-radius: 2% 2% 2% 2%;
+    -webkit-border-radius: 2% 2% 2% 2%;
+    border: 1px gre #000000;
+}
+
+.wrapper {
+    max-width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -45%;
+    z-index: 1000%;
+    
+}
+.products-caption {
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    padding:4%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50%;
+    z-index: 100%;
+    color: aliceblue;
+}
+.products-caption :hover,:focus{
+    text-decoration:none;
+    color: #6dce5d;
+}

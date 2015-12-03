@@ -1,31 +1,19 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<div class="container-product">
+        <div class="row" >
+            <% @products.each do |product| %>
+            <div class="col-md-4 col-xs-6 col-xs-12">
+                <%= image_tag(product.image_url, class: 'img-responsive, img-thumbnail') %>
+                    <div class="wrapper ">
+                        <h2 class="products-caption">
+                          <a href="#">
+                            <%= product.name %>
+                          </a>
+                        </h2>  
+                    </div>
+            </div>
+            <% end %>
+        </div>
+</div>  
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+   
