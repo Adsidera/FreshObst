@@ -59,3 +59,5 @@ group :production do
   gem 'pg'
 end
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
+
+ruby '2.0.0'
