@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'contact' => 'contact#index', as: :contact
 
     get 'about' => 'about#index', as: :about
-
+    get 'landing_page' => 'static_pages#landing_page', as: :landing_page
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
