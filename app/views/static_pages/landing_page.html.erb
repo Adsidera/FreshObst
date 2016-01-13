@@ -1,3 +1,4 @@
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -12,7 +13,7 @@
       <% @products.each do |product| %>
         <div class="item<%= " active" if product == @products.first %>">
                 <%= image_tag(product.image_url,class: 'img-responsive') %>
-                <div class="carousel-caption"><%= product.name %></div>
+            <div class="carousel-caption"><h1><a href="#"><%= product.description %></a></h1></div>
         </div>
       <% end %>  
   </div>
