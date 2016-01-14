@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     get 'store' => 'store#index', as: :store
 
   get 'contact' => 'contact#index', as: :contact
+    get 'products/edit' => 'products#edit'
+    get 'products/destroy' => 'products#destroy'
 
     get 'about' => 'about#index', as: :about
     get 'landing_page' => 'static_pages#landing_page', as: :landing_page

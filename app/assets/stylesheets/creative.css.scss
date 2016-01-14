@@ -36,7 +36,7 @@ hr.light {
     border-color: #fff;
 }
 
-a {
+a, li {
     color: lightgrey;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -90,7 +90,7 @@ aside {
 }
 
 .navbar-default {
-    border-color: rgba(34,34,34,.05);
+    border-color: whitesmoke;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     background-color: #fff;
     -webkit-transition: all .35s;
@@ -137,7 +137,7 @@ aside {
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
-        background-color: transparent;
+        background-color:transparent;
     }
 
     .navbar-default .navbar-header .navbar-brand {
