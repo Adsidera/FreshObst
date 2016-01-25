@@ -1,8 +1,9 @@
+<div class="container">
+        <div class="row"><h1>Editing Product</h1></div>
 
-<h1>Editing Product</h1>
+        <%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @product %> |
-<%= link_to 'Delete', @product.destroy %> |
-<%= link_to 'Back', products_path %>
+        <%= link_to 'Show', @product %> |
+        
+        <%= link_to 'Back', products_path %>
+</div>

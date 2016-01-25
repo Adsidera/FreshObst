@@ -567,3 +567,14 @@ body {
 .carousel-caption h1 a :hover {
     color: #f05f40;
 }
+.searchform {
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+.edit_product, .new_product {
+    display: inline-block;
+    float: left;
+}
+#newtitle {
+    padding-top: 1%;
+}

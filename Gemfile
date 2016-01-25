@@ -62,4 +62,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #needed for Heroku
 
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
-
+gem pry 
