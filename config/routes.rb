@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
     root 'static_pages#landing_page'
     
+    post 'static_pages/thank_you'
     resources :orders, only: [:index, :show, :create, :destroy]
 
   # Example of regular route:
