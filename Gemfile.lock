@@ -60,7 +60,6 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
-    filters_spam (0.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -125,8 +124,6 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
-    refinerycms-inquiries (0.9.9.9)
-      filters_spam (~> 0.2)
     sass (3.4.19)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -179,7 +176,6 @@ DEPENDENCIES
   pg
   rails (= 4.2.4)
   rails_12factor
-  refinerycms-inquiries (~> 0.9)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sendgrid-rails (~> 2.0)
