@@ -41,6 +41,7 @@ gem 'autoprefixer-rails'
 # gem 'unicorn'
 
 # Use Capistrano for deployment
+
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
@@ -64,3 +65,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
 
 gem 'sendgrid-rails', '~> 2.0'
+
+gem 'refinerycms-inquiries',    '~> 0.9'
