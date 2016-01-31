@@ -63,4 +63,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
 
-
+gem 'sendgrid-rails', '~> 2.0'
