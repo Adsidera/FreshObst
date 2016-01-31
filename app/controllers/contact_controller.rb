@@ -13,3 +13,4 @@ def thank_you
         :body => @message).deliver_now
     UserMailer.contact_form(@email, @name, @message).deliver_now
 end
+ ActionMailer::Base.delivery_method = :smtp
