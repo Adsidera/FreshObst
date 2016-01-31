@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
   resources :products
     get 'news/index' => 'news#index', as: :news
     get 'store' => 'store#index', as: :store
@@ -19,6 +21,9 @@ Rails.application.routes.draw do
     
     post 'static_pages/thank_you'
     resources :orders, only: [:index, :show, :create, :destroy]
+    
+    devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+    
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
