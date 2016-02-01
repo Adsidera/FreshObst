@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+    before_action :set_user, only: [:show, :edit, :update, :destroy] #inserted by scaffolding - callback method
+    before_filter :authenticate_user!, :except => [:show, :index} #make sure user is signed before accessing the controller except for the index action
+    load_and_authorize_resource #will find the user and check their authorization
   # GET /users
   # GET /users.json
   def index

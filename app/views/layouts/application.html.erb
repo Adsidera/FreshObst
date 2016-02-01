@@ -34,11 +34,12 @@
                     
                     <li class="searchform">
                         <%= form_tag("/products", method: "get") do %>
-                            <%= label_tag %> <i class='glyphicon, glyphicon glyphicon-search'></i>
+                            <%= label_tag %> 
                             <%= text_field_tag(:q) %>
-                        <%= submit_tag"Search", :class =>'btn btn-primary' %>
-                       <% end %>
-
+                            <%= button_tag(type: "submit") do %>
+                                <i class='glyphicon, glyphicon glyphicon-search'></i>
+                            <% end %>
+                        <% end %>
                     </li>
                     <li>
                         <%= link_to "Store", products_path %>
@@ -53,16 +54,21 @@
                         <%= link_to "Contact", contact_path %>
                     </li>
                 </ul>
-                <ul class="nav pull-left" style="padding-left:1%; padding-top:0.7%;">
-                    <p class="notice" style="color:white;"><%= notice %></p>
-                    <p class="alert" style="color:white;"><%= alert %></p>
+                <ul class="nav pull-left" style="padding-left:1%;padding-top:0.5%">
+                    <% if notice %>
+                        <p id="notice" class=" alert btn-success" style="color:white;"><%= notice %></p>
+                    <% end %>
+                    <% if alert %>
+                        
+                        <p id="alert" class="alert btn-warning" style="color:white;"><%= alert %></p>
+                    <% end %>
                 </ul>
                 <ul class="nav pull-right" style="padding-top: 0.5%; padding-right: 0.5%">
                     <li>
                         <% if user_signed_in? %>
-                            <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => 'btn-primary') %>
+                            <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => 'btn-danger') %>
                         <% else %>
-                        <%= link_to('Login', new_user_session_path, :class => 'btn-success') %>
+                        <%= link_to('Login', new_user_session_path, :class => 'btn-warning') %>
                         <% end %>
                     </li>
                 </ul>
@@ -71,7 +77,9 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    
+  <script>
+    setTimeout("$('.alert').fadeOut('slow')", 1000)
+  </script> 
     <%= yield %>
 <header>
         <div class="header-content">

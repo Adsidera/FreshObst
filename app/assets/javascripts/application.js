@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require_tree 
 //= require bootstrap
+
+$('.alert').delay(800).fadeOut(400);
