@@ -1,5 +1,5 @@
 <div class="container-fluid" id="login">
-    <form class="form-signin">
+   
      <h2 class="form-signin-heading">Sign up</h2>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
@@ -27,5 +27,5 @@
         <% end %>
 <br>
 <%= render "devise/shared/links" %>
-    </form> 
+   
 </div>

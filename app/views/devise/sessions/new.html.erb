@@ -1,5 +1,5 @@
 <div class="container-fluid" id="login" style"margin-left:30%; margin-right:0;">
-   <form class="form-signin"> 
+    
         <h2 class="form-signin-heading">Log in</h2>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -26,5 +26,5 @@
                 <% end %>
     <br>
     <%= render "devise/shared/links" %>
-    </form>
+    
 </div>
