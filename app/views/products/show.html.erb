@@ -1,24 +1,21 @@
+<div class="container" style="background:white; margin-top:3%;z-index:100%;">
+    <p id="notice"><%= notice %></p>
+    <div class="row" style="padding-top:2%;">
+         <div class="col-sm-6 col-md-4">
+ 
+                <div class="thumbnail">
+                    <%= image_tag( @product.image_url, class: 'img-responsive') %>
+                </div> 
+                <%= render 'comments' %>
+                <%= render'new_comment' %>
+         </div>
+         <div class="col-sm-6 col-md-4">
+                <h2 class=><strong><%= @product.name %></strong></p></h2>
 
-<p id="notice"><%= notice %></p>
-<div class=""
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+                <p><strong><%= @product.description %></strong></p>
+                <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+        </div>
+    </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-<p>
-  <strong>Color:</strong>
-  <%= @product.color %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> 
-|<%= link_to 'Back', products_path %>
+<%= link_to 'Edit', edit_product_path(@product) %> |<%= link_to 'Back', products_path %>
+</div>

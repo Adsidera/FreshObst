@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :users
-  resources :products
+    devise_for :users
+  
+  
+    resources :products do
+        resources :comments
+    end   
+    resources :users
+    
     get 'news/index' => 'news#index', as: :news
     get 'store' => 'store#index', as: :store
 

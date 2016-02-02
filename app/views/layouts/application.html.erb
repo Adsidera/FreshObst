@@ -54,8 +54,12 @@
                     </li>
                 </ul>
                 <ul class="nav pull-left" style="padding-left:1%; padding-top:0.7%;">
-                    <p class="notice" style="color:white;"><%= notice %></p>
-                    <p class="alert" style="color:white;"><%= alert %></p>
+                    <% if notice %>    
+                        <p class="alert alert-success" style="color:green;"><%= notice %></p>
+                    <% end %>
+                    <% if alert %>
+                        <p class="alert alert-danger" style="color:white;"><%= alert %></p>
+                    <% end %>
                 </ul>
                 <ul class="nav pull-right" style="padding-top: 0.5%; padding-right: 0.5%">
                     <li>
@@ -71,6 +75,9 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <script>
+    setTimeout("$('.alert').fadeOut('slow')", 800)
+  </script>
     
     <%= yield %>
 <header>

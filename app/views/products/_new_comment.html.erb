@@ -1,0 +1,22 @@
+<% if signed_in? %>
+    <h2 class="form-signin-heading">Add a review</h2>
+    <%= form_for([@product, @product.comments.build]) do |f| %>
+        <p>
+            <%= f.label :body, "Comments" %><br>
+            <%= f.text_area :body %>
+        </p>
+        <p>
+            <div class="rating"></div>
+            
+        </p>
+        <p>
+            <%= f.submit "Submit" %>
+        </p>
+    
+    <% end %>
+<% end %>
+<script>
+        $(document)on('ready page:load', function() {
+                $('.rating').raty( { path: '/assets'});
+        });
+    </script>
