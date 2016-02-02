@@ -67,3 +67,5 @@ gem 'paperclip', '~> 4.3', '>= 4.3.2'
 gem 'sendgrid-rails', '~> 2.0'
 
 gem 'devise'
+
+gem 'cancancan'
