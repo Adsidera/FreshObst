@@ -41,4 +41,5 @@ Rails.application.configure do
     config.action_mailer.default_url_options = {:host => 'localhost:3000'}
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.perform_deliveries = true
+    config.assets.prefix = '/dev/assets'
 end
