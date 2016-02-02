@@ -15,8 +15,3 @@
 //= require turbolinks
 //= require_tree 
 //= require bootstrap
-<<<<<<< HEAD
-=======
-
-$('.alert').delay(800).fadeOut(400);
->>>>>>> authorization
