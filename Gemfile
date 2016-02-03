@@ -69,3 +69,7 @@ gem 'sendgrid-rails', '~> 2.0'
 gem 'devise'
 
 gem 'cancancan'
+
+## Gemfile for Rails 3+, Sinatra, and Merb
+gem 'will_paginate', '~> 3.0.5'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'

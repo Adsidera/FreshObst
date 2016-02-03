@@ -10,6 +10,8 @@ class ProductsController < ApplicationController
     else
         @products = Product.all
     end
+    
+    
       
   end
 
@@ -17,6 +19,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
       @comments = @product.comments.order("created_at DESC")
+      @comments = Comment.paginate(:page => params[:page], :per_page => 3)
   end
 
   # GET /products/new
@@ -47,6 +50,17 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to @product, notice: 'Review was created successfully'}
+        format.json { render :show, status: created, location: @product }
+      else
+        format.html { redirect_to @product, alert: 'Review was not saved successfully'}
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
+    end
+
   end
  
   # PATCH/PUT /products/1

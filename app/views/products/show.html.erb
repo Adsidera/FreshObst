@@ -7,7 +7,9 @@
                     <%= image_tag( @product.image_url, class: 'img-responsive') %>
                 </div> 
                 <%= render 'comments' %>
+              <p><%= will_paginate @comments, renderer: BootstrapPagination::Rails %></p>
                 <%= render'new_comment' %>
+
          </div>
          <div class="col-sm-6 col-md-4">
                 <h2 class=><strong><%= @product.name %></strong></p></h2>
