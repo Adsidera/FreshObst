@@ -10,13 +10,13 @@ Rails.application.routes.draw do
     get 'news/index' => 'news#index', as: :news
     get 'store' => 'store#index', as: :store
 
-  get 'contact' => 'contact#index', as: :contact
+    get 'contact' => 'contact#index', as: :contact
     get 'products/edit' => 'products#edit'
-    
+    get 'products' => 'comments#show'
 
     get 'about' => 'about#index', as: :about
     get 'landing_page' => 'static_pages#landing_page', as: :landing_page
-  get 'home/index'
+    get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

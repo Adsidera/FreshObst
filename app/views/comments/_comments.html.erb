@@ -5,9 +5,9 @@
                 <p><small><%= comment.user.email %><em><%= " #{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
                 <div class="rated" data-score="<%= comment.rating %>"></div>
                 <p><%= comment.body %></p>
-                 <% if signed_in? && current_user.admin? %> 
-                <p><%= link_to 'Destroy', product_comment_path( @product, comment), method::delete, data: { confirm: 'Are you sure?'} %></p>                   <% end %>
-                
+                 <!--<% if signed_in? && current_user.admin? %> 
+                	<p><%= link_to 'Destroy', redirect_to product_comment_path(@product, comment ) method::delete, data: { confirm: 'Are you sure?'} %></p> -->
+               <!-- <% end %>-->
         </div>
     <% end %>
 </div>

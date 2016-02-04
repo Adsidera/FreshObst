@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  # So admin abilities are applied to only these.  
+  # So public can view product without signing in.
+  
   # GET /products
   # GET /products.json
   def index
@@ -25,6 +28,9 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    @comment = @product.comments.new(comment_params)
+        @comment.user = current_user
+        
   end
 
   # GET /products/1/edit
@@ -36,10 +42,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     @product = Product.find(params[:product_id])
-        @comment = @product.comments.new(comment_params)
-        @comment.user = current_user
-        @comment.save
-        redirect_to product_path(@product)  
+          
       
     respond_to do |format|
       if @product.save
@@ -85,6 +88,7 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
+     
   end
    
     
