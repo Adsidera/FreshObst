@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
     get 'contact' => 'contact#index', as: :contact
     get 'products/edit' => 'products#edit'
-    get 'products' => 'comments#show'
+ 
 
     get 'about' => 'about#index', as: :about
     get 'landing_page' => 'static_pages#landing_page', as: :landing_page
