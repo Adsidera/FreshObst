@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:edit, :update]
  
   # So admin abilities are applied to only these.  
   # So public can view product without signing in.
@@ -14,25 +14,25 @@ class ProductsController < ApplicationController
     else
         @products = Product.all
     end
-    
-    
-
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+      @product = Product.find(params[:id])
+      # @comment = current_user.comment.build(comment_params)
       @comments = @product.comments.order("created_at DESC")
       @comments = Comment.paginate(:page => params[:page], :per_page => 3).order("created_at DESC")
   end
 
+
   # GET /products/new
   def new
     @product = Product.new
-    @comment = @product.comments.new(comment_params)
-        @comment.user = current_user
-        
+    # @comment = @product.comments.new(comment_params)
+    #     @comment.user = current_user
   end
+
 
   # GET /products/1/edit
   def edit
@@ -42,13 +42,11 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    @product = Product.find(params[:product_id])
-      @comment = @product.comments.new(comment_params)
-      @comment.user = current.user
-      
+    
+    
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to @product, alert: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -56,15 +54,17 @@ class ProductsController < ApplicationController
       end
     end
 
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @product, notice: 'Review was created successfully'}
-        format.json { render :show, status: created, location: @product }
-      else
-        format.html { redirect_to @product, alert: 'Review was not saved successfully'}
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
-    end
+    
+    
+    # respond_to do |format|
+    #   if @comment.save
+    #     format.html { redirect_to @product, notice: 'Review was created successfully'}
+    #     format.json { render :show, status: created, location: @product }
+    #   else
+    #     format.html { redirect_to @product, alert: 'Review was not saved successfully'}
+    #     format.json { render json: @comment.errors, status: :unprocessable_entity }
+    #   end
+    # end
 
   end
  
@@ -90,10 +90,10 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
-     @comment = Comment.find(params[:id])
-        product  = @comment.product
-        @comment.destroy
-      redirect_to product
+     # @comment = Comment.find(params[:id])
+     #    product  = @comment.product
+     #    @comment.destroy
+     #  redirect_to @product
   end
    
     
