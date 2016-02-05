@@ -10,7 +10,10 @@
                 <p><%= comment.body %></p>
                  
                 <% if signed_in? && current_user.admin? %> 
-                <p><%= link_to 'Destroy', product_comment_path( @product, comment), method: :delete, data: { confirm: 'Are you sure?'} %></p>
+                <p><%= link_to  product_comment_path( @product, comment), method: :delete, data: { confirm: 'Are you sure?'} do %>
+                    <i class="fa fa-trash-o fa-fw"></i>
+                    <% end %>
+                </p>
                 <% end %>
                 
         </div>
