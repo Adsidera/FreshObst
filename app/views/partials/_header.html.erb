@@ -1,10 +1,10 @@
 <% if params[:controller] == "home" %>
-    
-     <div class= "header-content-inner" >
-                    <a href="#"><h1 class="sayfreshobst">Say FreshObst!</h1></a>
-                    <hr>
-                    <p style="text-transform:none;">Your freshest Fruit and Vegetables near you, just a click away</p>
-         <button class="btn btn-primary btn-xl page-scroll"><%= link_to "Shop for vegetables now", products_path%></button>
-        </div>
+    <div class="jumbotron" style="background-color:rgba(255,255,255,0.7);">
+		    <div class= "header-content-inner" >
+		                    
+		                   
+		     	<button class="btn-primary"><%= link_to ('<h1>Enter the Fresh</h1>').html_safe, products_path %></button>
+		          
+		    </div>
 	</div>        
 <% end%>

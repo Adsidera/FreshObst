@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
-   
+  
     # So admin abilities are applied to only these.  
     # So public can view product without signing in.
-    load_and_authorize_resource :only => [:new, :update, :create, :destroy]
+    load_and_authorize_resource :only => [:destroy]
     
     def index
         
