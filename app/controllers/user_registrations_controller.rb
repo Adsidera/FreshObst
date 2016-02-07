@@ -1,6 +1,6 @@
 class UserRegistrationsController < Devise::RegistrationsController
-    before_filter :configure_permitted_parameters
-
+    before_filter :configure_permitted_parameters #important for permitting Devise to record firstname in users database
+    
     def create
         super
         if @user.persisted?
@@ -11,7 +11,7 @@ class UserRegistrationsController < Devise::RegistrationsController
 
     protected
 
-    # my custom fields are :name, :heard_how
+    #below lines important for permitting Devise to record firstname in users database
     def configure_permitted_parameters
     	devise_parameter_sanitizer.for(:sign_up) do |u|
       	u.permit(:first_name, :last_name,
