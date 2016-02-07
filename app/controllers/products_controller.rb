@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
       # @comment = current_user.comment.build(comment_params)
       @comments = @product.comments.order("created_at DESC")
-      @comments = Comment.paginate(:page => params[:page], :per_page => 3).order("created_at DESC")
+      @comments = @product.comments.paginate(:page => params[:page], :per_page => 3).order("created_at DESC")
   end
 
 
