@@ -1,9 +1,12 @@
 <% if params[:controller] == "home" %>
     <div class="jumbotron" style="background-color:rgba(255,255,255,0.7);">
-		    <div class= "header-content-inner" >
+		    <div class= "header-content-inner">
+                <%=link_to products_path do %>
+                    <%= image_tag('freshobst.png', :class => 'img-responsive')%> 
+                <% end %>
 		                    
 		                   
-		     	<button class="btn-primary"><%= link_to ('<h1>Enter the Fresh</h1>').html_safe, products_path %></button>
+<!--		     	<button class="btn-primary"><%= link_to ('<h1>Enter the Fresh</h1>').html_safe, products_path %></button>-->
 		          
 		    </div>
 	</div>        
