@@ -10,8 +10,9 @@ class UserMailer < ApplicationMailer
         end
         
     def welcome(user)
+        @user = user
         @appname = "FreshObst"
-        mail(:to => user.email,
+        mail(:to => @user.email,
             :subject => "Welcome to #{@appname}!")
     end
 end
