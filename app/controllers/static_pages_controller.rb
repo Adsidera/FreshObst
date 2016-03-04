@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
     end
     
     def landing_page
-        </small>
+        
     end
     def thank_you
     @name = params[:name]
