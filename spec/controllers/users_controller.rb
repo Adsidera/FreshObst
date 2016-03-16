@@ -30,15 +30,7 @@ describe UsersController do
         
     end
     
-    context "User1 tries to see user page" do
-        before do
-            sign_in @user1
-        end
-        it "loads wrong user details" do
-            test
-        end
-        
-    end
+   
   describe "GET Unauthorized page" do
     before do
       sign_in(@user)
