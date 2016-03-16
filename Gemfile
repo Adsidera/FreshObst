@@ -49,6 +49,7 @@ group :development, :test do
     
     gem 'byebug'
     gem 'rspec-rails', '~> 3.0'
+    gem 'factory_girl_rails' , "~> 4.0"
 end
 
 group :development do
@@ -75,3 +76,4 @@ gem 'cancancan'
 gem 'will_paginate', '~> 3.0.5'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'font-awesome-rails'
+
