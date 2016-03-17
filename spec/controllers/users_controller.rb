@@ -3,23 +3,25 @@ require 'rails_helper'
 describe UsersController do
     
     before do
-        @user = User.create!(email: "testuser@test.it", password: "12345678")
-        @user1 = User.create!(email: "testuser1@test.it", password: "98765432")
+        #@user = User.create!(email: "testuser@test.it", password: "12345678")
+        #@user1 = User.create!(email: "testuser1@test.it", password: "98765432")
+        @user = FactoryGirl.create(:user)
+        
     end
     
     describe "GET #show" do
+      
         # Test to check if logged user sees pages of other users
         context "User is logged in" do
             before do #before condition user should be logged
                 sign_in @user #devise helper
-            
             end
             it "loads correct user details" do #spec
                 get :show, id: @user.id  #loads page with id of user
                 expect(assigns(:user)).to eq @user #expects the assigned user to be equal to the logged user 
             end
-            
         end
+        
         # Context block when user is not logged in
         context "No user is logged in" do 
             it "redirects to login" do # spec action
@@ -30,15 +32,9 @@ describe UsersController do
         
     end
     
-    context "User1 tries to see user page" do
-        before do
-            sign_in @user1
-        end
-        it "loads wrong user details" do
-            test
-        end
+    
         
-    end
+   
   describe "GET Unauthorized page" do
     before do
       sign_in(@user)
@@ -52,4 +48,5 @@ describe UsersController do
       end
     end
   end
+  
 end
