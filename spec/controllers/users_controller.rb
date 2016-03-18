@@ -26,7 +26,7 @@ describe UsersController do
         context "No user is logged in" do 
             it "redirects to login" do # spec action
                 get :show, id: @user.id
-                expect(response).to redirect_to(root_path) #expected response of redirecting to root
+                expect(response).to redirect_to(new_user_session_path) #expected response of redirecting to root
             end #end of spec block
         end #end of context block
         
@@ -41,7 +41,7 @@ describe UsersController do
     end
 
     
-    context "Attempt to access show page of usertwo" do
+    context "Attempt to access show page of usertwo"  do
       it "redirects to login" do 
         get :edit, id: @user1.id
         expect(response).to redirect_to(root_path)

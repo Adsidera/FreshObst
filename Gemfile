@@ -43,6 +43,7 @@ gem 'autoprefixer-rails'
 # Use Capistrano for deployment
 
 # gem 'capistrano-rails', group: :development
+gem 'rb-readline'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -50,6 +51,10 @@ group :development, :test do
     gem 'byebug'
     gem 'rspec-rails', '~> 3.0'
     gem 'factory_girl_rails', '~> 4.0'
+    gem 'guard'
+    gem 'guard-rspec', require: false
+    gem 'spork-rails'
+    gem 'guard-spork'
 end
 
 group :development do
