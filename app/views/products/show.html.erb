@@ -6,18 +6,26 @@
                 <div class="thumbnail">
                     <%= image_tag( @product.image_url, class: 'img-responsive') %>
                 </div> 
+                
+
                 <%= render 'comments' %>
               <p><%= will_paginate @comments, renderer: BootstrapPagination::Rails %></p>
                 <%= render'new_comment' %>
+
 
          </div>
          <div class="col-sm-6 col-md-4">
                 <h2 class=><strong><%= @product.name %></strong></p></h2>
 
                 <p><strong><%= @product.description %></strong></p>
-                <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+                <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>">
+                
+        </div><br>
+        <%= form_tag "/payments/create" do %>
+                  <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %></p>
+                <%= link_to 'Edit', edit_product_path(@product) %> |<%= link_to 'Back', products_path %>
+        </div>
         </div>
     </div>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |<%= link_to 'Back', products_path %>
-</div>

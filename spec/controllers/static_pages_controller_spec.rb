@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 require 'rails_helper'
 
  describe  StaticPagesController, :type => :controller do
@@ -19,7 +19,7 @@ require 'rails_helper'
     
  end
 
-=======
+
 require 'rails_helper'
 
  describe  StaticPagesController, :type => :controller do
@@ -40,4 +40,3 @@ require 'rails_helper'
     
  end
 
->>>>>>> aaea7e0c3b52567881a26d24684af70d152d9666
