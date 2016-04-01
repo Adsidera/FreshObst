@@ -4,7 +4,7 @@
          <div class="col-sm-6 col-md-4">
  
                 <div class="thumbnail">
-                    <%= image_tag( @product.image_url, class: 'img-responsive') %>
+                    <%= image_tag( @product.image_url, class: 'img-responsive, img-zoom', data_image_zoom: @product.image_url) %>
                 </div> 
                 
 
