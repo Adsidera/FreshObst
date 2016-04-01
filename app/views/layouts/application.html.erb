@@ -80,12 +80,14 @@
     </nav>
 
     <%= yield %>
+<% if params[:controller] == "home" %>
 <header>
         <div class="header-content">
             <%= render 'partials/header' %>
         </div>
 </header>
-   
+    
+<% end%>  
 
 
    
