@@ -16,7 +16,7 @@ class PaymentsController < ApplicationController
                 Order.create(
                     product_id: @product,
                     user_id: current_user, 
-                    total: @product.price *100
+                    total: @product.price 
                     )
                 flash[:success] = "Thank you for your order"
             end
