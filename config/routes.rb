@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     end   
     resources :users
     
+    resources :orders, only: [:index, :show, :create, :destroy]
+
     get 'news/index' => 'news#index', as: :news
     get 'store' => 'store#index', as: :store
 

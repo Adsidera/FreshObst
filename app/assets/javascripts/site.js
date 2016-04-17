@@ -12,3 +12,6 @@ $(document).on('ready page:load', function() {
         cursor: "crosshair"
     }); 
 });
+
+
+

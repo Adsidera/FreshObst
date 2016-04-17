@@ -23,6 +23,7 @@ background: url(sfondofresco2.jpg);
 }
 #pageall {
 background: white;
+
 }
 hr {
     max-width: 50px;
@@ -94,8 +95,11 @@ aside {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+    color: #59A55A;
 }
-
+.navbar-default .nav > li {
+    color: #59A55A;
+}
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
@@ -113,12 +117,12 @@ aside {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    color: #222;
+    color: #59A55A;
 }
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
+    color: #59A55A;
 }
 
 .navbar-default .nav > li.active>a,
@@ -154,7 +158,7 @@ aside {
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
+        color: #59A55A;
     }
 
     .navbar-default.affix {
@@ -174,7 +178,7 @@ aside {
 
     .navbar-default.affix .nav > li>a,
     .navbar-default.affix .nav>li>a:focus {
-        color: #222;
+        color: #59A55A;
     }
 
     .navbar-default.affix .nav > li>a:hover,
