@@ -2,6 +2,7 @@
 <body id="pageall">
 <div class="container-product">
         <div class="row" id="fila" >
+         
             <% @products.each do |product| %>
             <div class="col-md-4 col-xs-6 col-xs-12">
                 <%= image_tag(product.image_url, class: 'img-responsive, img-thumbnail') %>
@@ -16,6 +17,7 @@
                     </div>
             </div>
             <% end %>
+        
         </div>
 </div>  
 
