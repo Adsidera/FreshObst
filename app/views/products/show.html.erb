@@ -16,15 +16,15 @@
 
          </div>
          <div class="col-sm-6 col-md-4">
-           <% cache @product do %>  <!-- Cache product -->
+           
                 <h2 class=><strong><%= @product.name %></strong></p></h2>
 
                 <p><strong><%= @product.description %></strong></p>
-           <% end %> <!-- End Cache product -->
+          
                 <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>">
                 
         </div><br>
-        <%= form_tag "/payments/create" do %>
+        <%= form_tag "/orders/index" do %>
         <%= hidden_field_tag(:product_id, @product.id) %>
                   <%= render partial: "shared/stripe_checkout_button" %>
         <% end %></p>

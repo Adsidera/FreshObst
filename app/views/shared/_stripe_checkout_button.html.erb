@@ -1,8 +1,13 @@
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+ value="Pay with Card"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-  data-image="/square-image.png"
-  data-name="Buy the Fresh!"
+  data-image="hot.png"
+  data-name="FreshObst"
   data-description="2 widgets ($20.00)"
+  data-currency = "eur"
+  
+  data-billing-address ="true"
+  data-label = "Buy Now"
   data-amount="2000">
 </script>
