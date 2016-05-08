@@ -24,8 +24,8 @@
                     <%= f.text_field :image_url %>
             </div>
             <div class="field">
-                    <%= f.label :color %><br>
-                    <%= f.text_field :color %>
+                <%= f.label :price %><br>
+                <%= f.number_field :price, :step => 0.01 %>
             </div>
             <div class="actions">
                     <%= f.submit %>

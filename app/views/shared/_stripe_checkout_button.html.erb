@@ -4,10 +4,10 @@
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
   data-image="https://cdn4.iconfinder.com/data/icons/free-game-icons/64/Carrot.png"
   data-name="FreshObst"
-  data-description="2 widgets ($20.00)"
+  data-description="1/2 kg <%= @product.name %> at <%= @product.price %>€"
   data-currency = "eur"
   
   data-billing-address ="true"
   data-label = "Buy Now"
-  data-amount="2000">
+  data-amount="<%= (@product.price)*100%>">
 </script>
