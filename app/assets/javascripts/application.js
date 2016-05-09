@@ -19,4 +19,3 @@
 //= require_tree 
 //= require bootstrap
 //= require jquery.elevatezoom
-//= require app
