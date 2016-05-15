@@ -4,10 +4,10 @@
         <div class="row" id="fila" >
          
             <% @products.each do |product| %>
-            <div class="col-md-4 col-xs-6 col-xs-12">
-                <%= image_tag(product.image_url, class: 'img-responsive, img-thumbnail') %>
+            <div class="col-md-4 col-xs-6 col-xs-12 propic" >
+                    <%= image_tag(product.image_url, class: 'img-responsive, img-thumbnail ') %>
                 
-                    <div class="wrapper ">
+                    <div class="wrapper">
                         <h2 class="products-caption">
                           <a href="#">
                               
@@ -15,6 +15,7 @@
                            </a>
                         </h2>  
                     </div>
+                
             </div>
             <% end %>
         

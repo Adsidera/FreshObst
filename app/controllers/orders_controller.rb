@@ -36,6 +36,10 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:product_id, :user_id, :total)
+    
+      if params[:orders] && params[:orders][:stripe_card_token].present?
+          params.require(:order).permit(:product_id, :user_id, :total, :stripe_card_token)
+      end
   end
+    
 end
