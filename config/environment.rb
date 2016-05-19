@@ -13,3 +13,4 @@ ActionMailer::Base.smtp_settings = {
     :password       => ENV['SENDGRID_PASSWORD'],
     :domain         => 'heroku.com'
 }
+ActionMailer::Base.default_url_options = { host: 'freshobst.herokuapp.com' }
