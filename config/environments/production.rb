@@ -87,7 +87,7 @@ Rails.application.configure do
                      :socket_failure_delay => 0.2
                     }
 config.action_mailer.delivery_method = :smtp
-Rails.application.routes.default_url_options[:host] = 'yoursite.herokuapp.com'
+config.action_mailer.default_url_options = { :host => 'freshobst.heroku.com' }
 
 ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
