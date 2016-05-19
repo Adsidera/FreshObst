@@ -633,11 +633,13 @@ body {
 //Users - Users Login
 
 #login {
-    margin-left: 40%;
-     padding-left: 1%;
+    margin:10% 33% 10% 33%;
+    padding-left: 1%;
     padding-bottom: 1%;
-    margin-right: 40%;
-    margin-top: 2.7%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.4);
+   
     -webkit-border-radius:20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;
     border-radius: 20px 20px 20px 20px;

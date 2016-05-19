@@ -10,8 +10,11 @@
                     <div class="wrapper">
                         <h2 class="products-caption">
                           <a href="#">
-                              
+                            <% if user_signed_in? %>
                               <%= link_to product.name, product %>
+                            <% else %>
+                              <%= link_to product.name, new_user_session_path %>
+                            <% end %>
                            </a>
                         </h2>  
                     </div>
