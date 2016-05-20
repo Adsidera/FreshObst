@@ -567,69 +567,7 @@ body {
   content: "\f123";
 }
 
-/***********
- *  Media  *
- ***********/
 
-@media(min-width:768px) {
-    .navbar-default {
-        border-color: rgba(255,255,255,.3);
-        background-color:transparent;
-    }
-
-    .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
-    }
-
-    .navbar-default .navbar-header .navbar-brand:hover,
-    .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
-    }
-
-    .navbar-default .nav > li>a,
-    .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
-    }
-
-    .navbar-default .nav > li>a:hover,
-    .navbar-default .nav>li>a:focus:hover {
-        color: #59A55A;
-    }
-
-    .navbar-default.affix {
-        border-color: rgba(34,34,34,.05);
-        background-color: #fff;
-    }
-
-    .navbar-default.affix .navbar-header .navbar-brand {
-        font-size: 14px;
-        color: #f05f40;
-    }
-
-    .navbar-default.affix .navbar-header .navbar-brand:hover,
-    .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #eb3812;
-    }
-
-    .navbar-default.affix .nav > li>a,
-    .navbar-default.affix .nav>li>a:focus {
-        color: #59A55A;
-    }
-
-    .navbar-default.affix .nav > li>a:hover,
-    .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
-    }
-    
-    #logo {
-    color:#f05f40;
-    }
-    
-    #logo>a:focus:hover {
-       text-decoration: none;
-    color:#f05f40;
-    }
-}
 
 header {
     position: relative;
@@ -719,6 +657,69 @@ header .header-content .header-content-inner p {
         font-size: 18px;
     }
 
+/***********
+ *  Media  *
+ ***********/
+
+@media(min-width:768px) {
+    .navbar-default {
+        border-color: rgba(255,255,255,.3);
+        background-color:transparent;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        color: rgba(255,255,255,.7);
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: #fff;
+    }
+
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+        color: rgba(255,255,255,.7);
+    }
+
+    .navbar-default .nav > li>a:hover,
+    .navbar-default .nav>li>a:focus:hover {
+        color: #59A55A;
+    }
+
+    .navbar-default.affix {
+        border-color: rgba(34,34,34,.05);
+        background-color: #fff;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 14px;
+        color: #f05f40;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand:hover,
+    .navbar-default.affix .navbar-header .navbar-brand:focus {
+        color: #eb3812;
+    }
+
+    .navbar-default.affix .nav > li>a,
+    .navbar-default.affix .nav>li>a:focus {
+        color: #59A55A;
+    }
+
+    .navbar-default.affix .nav > li>a:hover,
+    .navbar-default.affix .nav>li>a:focus:hover {
+        color: #f05f40;
+    }
+    
+    #logo {
+    color:#f05f40;
+    }
+    
+    #logo>a:focus:hover {
+       text-decoration: none;
+    color:#f05f40;
+    }
+}
 @media(min-width:992px) {
     .service-box {
         margin: 20px auto 0;
@@ -745,11 +746,11 @@ header .header-content .header-content-inner p {
 
 
 @media(max-width:440px) {
-    .headerjumbotron {
-        margin-top:120%;
-        padding-bottom:40%;
-        padding-top:40%;
-        margin-bottom: -120%;
+    #login2 {
+        margin-top:30%;
+        padding-bottom:10%;
+        padding-top:10%;
+        margin-bottom: -20%;
     }
     #login{
         margin-top: 25%;
@@ -757,9 +758,10 @@ header .header-content .header-content-inner p {
         margin-right: 10%;
         padding-left: 5%;
         padding-right: 4%;
+        padding-bottom: 7%;
+        margin-bottom: -20%;
     }
-    #login2{
-        margin-top: 33%;
-        margin-right: 20%;
+    .links{
+        
     }
 }
