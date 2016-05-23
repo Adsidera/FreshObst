@@ -518,6 +518,9 @@ body {
     border-radius: 20px 20px 20px 20px;
     background-color:rgba(255,255,255,0.7);
 }
+#onlysm{
+    display: none;
+}
 //Raty CSS
 
 .cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
@@ -761,7 +764,18 @@ header .header-content .header-content-inner p {
         padding-bottom: 7%;
         margin-bottom: -20%;
     }
-    .links{
-        
+    #header  {
+    margin-top: 60%;
+    padding-bottom: 50%;
+    padding-top: 50%;
+    
+    margin-bottom: -160%;
+    margin-left: 1%;
+    margin-right: 2%;
+    
+   -moz-border-radius: 150px; 
+   -webkit-border-radius: 150px; 
+   border-radius: 150px;
     }
+   
 }
